@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mostrar resultados</title>
+    </head>
+    <body >
+         <a h1> Los resultados de su busqueda </a>               
+        <div>
+            {% for results in results %}
+          <div><img src='{{results["thumbnail"]}}'> </div>
+          <div>{{results["title"]}}</div>
+          <div><a>{{results["price"]}}</a> <a>{{results["currency_id"]}}</a>{{results["price"  "currency_id"]}}</div>
+          <div><a>Unidades Vendidas:</a> <a>{{results["sold_quantity"]}}</a></div>
+          <div><a>Ciudad:</a> <a>{{results["address"]["city_name"]}}</a></div>
+          <!-- <div><a>Envio:</a> <a>{{results["shipping"]["free_shipping"]}}</a></div> -->
+          {% endfor %}
+        </div>
+    </body>
+</html>
+<!-- 
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mostrar resultados</title>
+    </head>
+    <body>
+        <strong>Nombre: </strong>{{nombre}}
+        <br>
+        <strong>Edad: </strong>{{edad}}
+    </body>
+</html> -->
